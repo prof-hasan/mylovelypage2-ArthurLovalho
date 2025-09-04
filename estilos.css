@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff;
+}
+
+nav {
+    background: #006400;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    text-align: center;
+}
+
+nav a:hover {
+    background: #228b22;
+}
+nav a:active {
+    transform: translateY(4px);
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background: #2d7c52;
+    color: white;
+    padding: 10px 20px;
+    gap: 15px;
+}
+
+#header_text {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 15px;
+}
+
+section {
+    padding: 20px;
+    display: none;
+    font-size: 40px;
+}
+
+section.active {
+    display: block;
+}
+
+#menu {
+    text-align: center;
+}
+
+.menu-links {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    gap: 10px;
+    justify-content: center;
+}
+
+.menu-links a {
+    padding: 10px 15px;
+    background: #2e8b57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu-links a:hover {
+    background: #228b22;
+}
+.menu-links a:active {
+    transform: translateY(4px);
+}
+
+footer {
+    background: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#aniquaticos {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: url("../mylovelypage2-ArthurLovalho-master/aniquáticos/fundo_aquat.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#anirrestres { 
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: url("../mylovelypage2-ArthurLovalho-master/anirrestres/fundo_terr.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#info {
+    margin-left: 10px;
+    color: yellow;
+    text-decoration: none;
+}
+#info:hover {
+   text-decoration: underline;
+}
+
+.img_ani {
+    width: 800px;
+    height: auto;
+}
+.animal {
+    position: absolute;
+    width: 120px;
+    transition: transform 0.5s ease;
+}
+#peixe {
+    top: 40%;
+    left: 0;
+    width: 200px;
+}
+#tubarao {
+    top: 150%;
+    left: -200px;
+    width: 500px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+.MENU{
+    position: fixed;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 0px;
+    background: yellow;
+    color: black;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+}
+.info{
+    display: flex;         
+    justify-content: center;
+    margin: 20px 0;  
+}
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background: #006400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+button:hover {
+  background: #004d00;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-conteudo {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.fechar {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+.fechar:hover {
+  color: red;
+}
+
+#Tigre {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 9999;
+}
+  .ref-body {
+    font-family: Arial, sans-serif;
+    background: grey;
+    padding: 20px;
+  }
+  .box {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display: grid;
+  }
+  .ref-h1{
+    display: grid;
+    text-align: center;
+  }
+  .box h2 {
+    margin-top: 0;
+    display: grid;
+  }
+  .box a {
+    display: block;
+    color: #0077cc;
+    text-decoration: none;
+    margin-bottom: 4px;
+  }
+  .box a:hover {
+    text-decoration: underline;
+  }
+  #cred{
+    background-color: #cccccc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #999999;
+    color: #000000;
+    max-width: 600px;
+    margin: 20px auto;
+  }

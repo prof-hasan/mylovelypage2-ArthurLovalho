@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aniquáticos</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <section class="active" id="aniquaticos">
+        <h1>Animais Aquáticos</h1>
+        <a class="MENU" href="../menu.html">Menu</a>
+        <p>São animais que vivem em ambientes de água doce ou salgada. Exemplos:</p>
+        
+        <ul class="lista-animais">
+            <li>
+                <p>Golfinho 🐬 - Mamífero marinho muito inteligente.</p>
+                <img class="img_ani" src="golfinho.jpg" alt="Golfinho">
+            </li>
+
+            <li>
+                <p>Baleia-azul 🐋 - O maior animal do planeta, podendo atingir mais de 30 metros de comprimento.</p>
+                <img class="img_ani" src="baleia_azul.jpg" alt="Baleia Azul">
+            </li>
+
+            <li>
+                <p>Orca 🦈 - Também conhecida como baleia-assassina, é um predador de topo que vive em grupos sociais.</p>
+                <img class="img_ani" src="orca.jpg" alt="Orca">
+            </li>
+
+            <li>
+                <p>Tartaruga-marinha 🐢 - Réptil que vive nos oceanos e coloca seus ovos na areia das praias.</p>
+                <img class="img_ani" src="tartaruga_marinha.jpg" alt="Tartaruga Marinha">
+            </li>
+        </ul>
+        <img id="peixe" class="animal" src="peixe.png" alt="Peixe">
+        <img id="tubarao" class="animal" src="tubarao.png" alt="Tubarão">
+    </section>
+
+    <script>
+function moverAnimal(animal, velocidade, inverter=false) {
+  if (getComputedStyle(animal).position === "static") {
+    animal.style.position = "fixed";
+  }
+  animal.style.bottom = animal.style.bottom || "0px";
+
+  function iniciar() {
+    const largura = animal.getBoundingClientRect().width;
+    if (largura === 0) {
+      requestAnimationFrame(iniciar);
+      return;
+    }
+
+    let pos = 0;
+
+    function frame() {
+      pos += velocidade;
+
+      const vw = window.innerWidth || document.documentElement.clientWidth;
+
+      if (pos + largura >= vw) {
+        pos = -largura;
+        if (inverter) animal.style.transform = "scaleX(1)";
+      }
+
+      animal.style.left = pos + "px";
+      requestAnimationFrame(frame);
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  iniciar();
+}
+
+const peixe = document.getElementById("peixe");
+const tubarao = document.getElementById("tubarao");
+
+moverAnimal(peixe, 1, true);
+moverAnimal(tubarao, 2, true);
+</script>
+</body>
+</html>
