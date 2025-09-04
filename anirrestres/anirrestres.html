@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Anirrestres</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<section class="active" id="anirrestres">
+    <h1>Anirrestres</h1>
+    <a class="MENU" href="../menu.html">Menu</a>
+    <p>São animais que vivem em ambientes de terra firme. Exemplos:</p>
+    <ul>
+        <li>
+            <p>Leão 🦁 - Conhecido como o rei da selva.</p>
+            <img class="img_ani" src="leao.jpg" alt="Leão">
+        </li>
+        <li>
+            <p>Elefante 🐘 - O maior animal terrestre.</p>
+            <img class="img_ani" src="elefante.jpg" alt="Elefante">
+        </li>
+        <li>
+            <p>Cachorro 🐶 - Companheiro fiel do homem.</p>
+            <img class="img_ani" src="cachorro.jpg" alt="Cachorro">
+        </li>
+        <li>
+            <p>Girafa 🦒 - O animal mais alto do mundo.</p>
+            <img class="img_ani" src="girafa.jpg" alt="Girafa">
+        </li>
+    </ul>
+    <img id="Tigre" class="animal" src="tigre.png" alt="Tigre">
+    <script>
+        function moverAnimal(animal, velocidade) {
+            let pos = -200;
+            setInterval(() => {
+                pos += velocidade;
+                if (pos > window.innerWidth) {
+                    pos = -200;
+                }
+                animal.style.left = pos + "px";
+            }, 30);
+        }
+
+        const peixe = document.getElementById("Tigre");
+
+        moverAnimal(Tigre, 5);
+    </script>
+
+    
+</section>

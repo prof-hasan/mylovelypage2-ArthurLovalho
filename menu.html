@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html lang="pt-br"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>Aniquáticos e Anirrestres</title> 
+        <link rel="stylesheet" href="estilos.css"> 
+    </head> 
+    <body>
+        <header> 
+            <img src="logotipo.png" alt="Logo Animais Aquáticos e Terrestres" width="200"> 
+            <h1 id="header_text">Aniquáticos e Anirrestres</h1> 
+            <p id="header_text">Explore o reino animal!</p> 
+        </header> 
+            <section id="menu" class="active"> 
+                <h2>Menu</h2> 
+                <p>Bem-vindo ao site! Aqui você vai conhecer curiosidades sobre os animais aquáticos e terrestres.</p> 
+                <p>Você pode escolher abaixo para navegar:</p> 
+                <div class="menu-links"> 
+                <a href="aniquáticos\aniquaticos.html">Aniquáticos</a>
+                <a href="anirrestres\anirrestres.html">Anirrestres</a>
+                </div> 
+                <div class="info">
+                    <button onclick="abrirModal()">Informações</button>
+                </div>
+                <div id="meuModal" class="modal">
+                <div class="modal-conteudo">
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+                <h2>Autor e colaboradores</h2>
+                <p>Autor: Arthur Lovalho</p>
+                <p>Colaborador: Daniel Hasan</p>
+                </div>
+                </div>
+            <script>
+                function abrirModal() {
+                document.getElementById("meuModal").style.display = "block";
+                }
+                function fecharModal() {
+                document.getElementById("meuModal").style.display = "none";
+                }
+            </script>
+            <a id="cred" href="ref.html">créditos</a>
+           </section>
+
+
